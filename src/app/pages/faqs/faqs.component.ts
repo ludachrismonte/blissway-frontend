@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-faqs',
-  imports: [],
   templateUrl: './faqs.component.html',
-  styleUrl: './faqs.component.scss'
+  styleUrl: './faqs.component.scss',
+  standalone: false
 })
-export class FaqsComponent {
+export class FaqsComponent implements OnInit {
 
+  constructor(private titleService: Title) { }
+
+  ngOnInit(): void {
+    this.titleService.setTitle('FAQs');
+  }
 }
