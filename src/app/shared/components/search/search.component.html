@@ -1,0 +1,43 @@
+<div class="violation-search">
+    <h2>Violation Search</h2>
+
+    <form (ngSubmit)="searchViolations()">
+        <div class="form-group">
+            <label for="violationNumber">Violation Number</label>
+            <input
+                    type="text"
+                    id="violationNumber"
+                    class="form-control"
+                    [(ngModel)]="violationNumber"
+                    name="violationNumber"
+                    required
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="state">State</label>
+            <input
+                    type="text"
+                    id="state"
+                    class="form-control"
+                    [(ngModel)]="state"
+                    name="state"
+                    required
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="licensePlate">License Plate</label>
+            <input
+                    type="text"
+                    id="licensePlate"
+                    class="form-control"
+                    [(ngModel)]="licensePlate"
+                    name="licensePlate"
+                    required
+            />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
