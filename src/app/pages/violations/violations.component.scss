@@ -1,0 +1,13 @@
+.search-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .flex-item {
+    flex: 0 1 520px;
+  }
+  @media (max-width: 768px) {
+    .flex-item {
+      flex: 1 1 100%;
+    }
+  }
+}

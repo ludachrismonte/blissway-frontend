@@ -1,9 +1,9 @@
-<div class="violation-search">
-    <h2>Violation Search</h2>
-
+<div class="search-box">
+    <h2>See notice of Speed Violation</h2>
+    <hr>
     <form (ngSubmit)="searchViolations()">
         <div class="form-group">
-            <label for="violationNumber">Violation Number</label>
+            <label for="violationNumber">Notice Number*</label><br>
             <input
                     type="text"
                     id="violationNumber"
@@ -15,7 +15,7 @@
         </div>
 
         <div class="form-group">
-            <label for="state">State</label>
+            <label for="state">State</label><br>
             <input
                     type="text"
                     id="state"
@@ -27,7 +27,7 @@
         </div>
 
         <div class="form-group">
-            <label for="licensePlate">License Plate</label>
+            <label for="licensePlate">License Plate</label><br>
             <input
                     type="text"
                     id="licensePlate"
@@ -39,5 +39,8 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Search</button>
+        <hr>
+        <p>You don't have the notice number?</p>
+        <button>Search by License Plate -></button>
     </form>
 </div>

@@ -1,4 +1,61 @@
 <app-body>
     <app-header></app-header>
+    <app-content>
+        <h1>Frequently asked questions</h1>
+        <br>
+        <br>
+        <mat-accordion>
+            <app-faq 
+                [question]="'Why did I receive a Notice of Civil Penalty Assessment?'"
+                [answer]="'A vehicle registered to you committed a safety violation on an Express Lane operated by the Colorado Transportation Investment Office – please refer to the “About the Program” section to learn more. The Notice of Civil Penalty Assessment is enforced as a toll evasion, pursuant to Colorado Statute section 43-4-808-2(2)(b) and CCR 606-1-4.00.'"
+                [isExpanded]="true"
+            ></app-faq>
+            <hr class="faq-separator">
+            <app-faq
+                [question]="'How do I pay a Civil Penalty?'"
+                [answer]="'A vehicle registered to you committed a safety violation on an Express Lane operated by the Colorado Transportation Investment Office – please refer to the “About the Program” section to learn more. The Notice of Civil Penalty Assessment is enforced as a toll evasion, pursuant to Colorado Statute section 43-4-808-2(2)(b) and CCR 606-1-4.00.'"
+            ></app-faq>
+            <hr class="faq-separator">
+            <app-faq
+                [question]="'How do I dispute a Civil Penalty?'"
+                [answer]="'A3'"
+            ></app-faq>
+            <hr class="faq-separator">
+            <app-faq
+                    [question]="'What is the penalty for a safety violation?'"
+                    [answer]="'A4'"
+            ></app-faq>
+            <hr class="faq-separator">
+            <app-faq
+                    [question]="'What address is a Notice of Civil Penalty Assessment Summary mailed to?'"
+                    [answer]="'A5'"
+            ></app-faq>
+            <hr class="faq-separator">
+            <app-faq
+                    [question]="'Do I have options to appeal the outcome of a dispute?'"
+                    [answer]="'A6'"
+            ></app-faq>
+            <hr class="faq-separator">
+            <app-faq
+                    [question]="'Do I have options to appeal the outcome of a hearing?'"
+                    [answer]="'A7'"
+            ></app-faq>
+            <hr class="faq-separator">
+            <app-faq
+                    [question]="'How do I file an appeal with the County Court?'"
+                    [answer]="'A8'"
+            ></app-faq>
+            <hr class="faq-separator">
+            <app-faq
+                    [question]="'I just got a notice from a company called Southwest Credit Systems LP. Who are they and what do they have to do with the CTIO safety enforcement program?'"
+                    [answer]="'A9'"
+            ></app-faq>
+            <hr class="faq-separator">
+            <app-faq
+                    [question]="'What is CTIO?'"
+                    [answer]="'A10'"
+            ></app-faq>
+        </mat-accordion>
+    </app-content>
     <app-footer></app-footer>
 </app-body>

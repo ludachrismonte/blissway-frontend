@@ -1,6 +1,26 @@
+@use '../../../../styles' as *;
+
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 66px;
+  margin-bottom: 30px;
   background: #C3CBE2;
   border-radius: 10px;
+  color: $color-dark-blue;
+  .footer-message {
+    margin-left: 20px;
+    font-size: 22px;
+  }
+  .footer-buttons {
+    display: flex;
+    margin-right: 20px;
+    font-size: 16px;
+    .footer-button {
+      background: transparent;
+      border: 0;
+    }
+  }
 }

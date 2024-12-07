@@ -1,0 +1,26 @@
+@use '../../../../styles' as *;
+
+mat-expansion-panel {
+  box-shadow: none !important;
+}
+
+mat-expansion-panel-header {
+  padding: 0 !important;
+}
+
+.handle {
+  width: 5%;
+  font-size: 30px;
+  color: $color-dark-blue;
+  font-weight: $font-light;
+}
+
+.question {
+  width: 95%;
+  font-weight: $font-bold;
+  font-size: 20px;
+}
+
+.answer {
+  padding-left: 16px;
+}

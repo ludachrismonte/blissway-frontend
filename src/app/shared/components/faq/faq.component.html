@@ -1,0 +1,11 @@
+<mat-expansion-panel 
+        [(expanded)]="isExpanded" 
+        hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            <div class="handle">{{ isExpanded ? '-' : '+' }}</div>
+            <div class="question">{{ question }}</div>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p class="answer">{{ answer }}</p>
+</mat-expansion-panel>
