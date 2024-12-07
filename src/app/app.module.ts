@@ -17,5 +17,6 @@ import { routes } from './app.routes';
     PagesModule,
     SharedModule
   ],
+  exports: [RouterModule],
 })
 export class AppModule { }

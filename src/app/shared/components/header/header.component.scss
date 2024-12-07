@@ -1,0 +1,34 @@
+@use '../../../../styles' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  .header-logos {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+  }
+  .header-buttons {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    .header-button {
+      padding: 8px 17px;
+      background-color: transparent;
+      border-radius: 25px;
+      color: $color-dark-gray;
+      font-weight: 600;
+      font-size: 17px;
+    }
+    .header-button:hover {
+      border: 1.5px solid #25242455;
+    }
+    .header-button.inactive {
+      border: 1.5px solid transparent;
+    }
+    .header-button.active {
+      border: 1.5px solid $color-dark-gray;
+    }
+  }
+}

@@ -1,1 +1,23 @@
-<p>header works!</p>
+<div class="header">
+    <div class="header-logos">
+        CDOT
+        CDOT
+    </div>
+    <div class="header-buttons">
+        <button class="header-button"
+                (click)="navigateToViolations()"
+                [ngClass]="activeRoute === violations ? 'active' : 'inactive'">
+            Violations
+        </button>
+        <button class="header-button"
+                (click)="navigateToAbout()"
+                [ngClass]="activeRoute === about ? 'active' : 'inactive'">
+            About the Program
+        </button>
+        <button class="header-button"
+                (click)="navigateToFAQs()"
+                [ngClass]="activeRoute === faqs ? 'active' : 'inactive'">
+            FAQs
+        </button>
+    </div>
+</div>

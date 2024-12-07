@@ -3,14 +3,18 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { FooterComponent } from "./components/footer/footer.component";
+import { BodyComponent } from "./components/body/body.component";
 import { HeaderComponent } from "./components/header/header.component";
+import { ContentComponent } from "./components/content/content.component";
+import { FooterComponent } from "./components/footer/footer.component";
 import { SearchComponent } from "./components/search/search.component";
 
 @NgModule({
   declarations: [
-    FooterComponent,
+    BodyComponent,
     HeaderComponent,
+    ContentComponent,
+    FooterComponent,
     SearchComponent
   ],
   imports: [
@@ -19,8 +23,10 @@ import { SearchComponent } from "./components/search/search.component";
     HttpClientModule
   ],
   exports: [
-    FooterComponent,
+    BodyComponent,
     HeaderComponent,
+    ContentComponent,
+    FooterComponent,
     SearchComponent
   ]
 })
