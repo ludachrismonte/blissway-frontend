@@ -24,17 +24,7 @@ export class SearchComponent {
         licensePlate: this.licensePlate
       });
 
-      this.violationService
-          .search(this.violationNumber, this.state, this.licensePlate)
-          .subscribe(
-              (response) => {
-                console.log('Search results:', response);
-              },
-              (error) => {
-                console.error('Error during search:', error);
-                alert('An error occurred during the search.');
-              }
-          );
+      this.violationService.search(this.violationNumber, this.state, this.licensePlate);
     }
     else alert('Please fill in all fields.');
   }

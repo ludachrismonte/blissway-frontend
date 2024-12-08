@@ -1,13 +1,56 @@
 <app-body>
     <app-header></app-header>
-    <div class="search-display">
-        <div class="flex-item">
-            <h3>TRAFFIC SAFETY</h3>
-            <h2>Colorado strives toward eliminating all traffic fatalities and severe injuries</h2>
+
+    <ng-container *ngIf="notices.length == 0">
+        <div class="search-display">
+            <div class="flex-item">
+                <h3>TRAFFIC SAFETY</h3>
+                <h2>Colorado strives toward eliminating all traffic fatalities and severe injuries</h2>
+            </div>
+            <div class="flex-item">
+                <app-search></app-search>
+            </div>
         </div>
-        <div class="flex-item">
-            <app-search></app-search>
-        </div>
-    </div>
+    </ng-container>
+
+    <ng-container *ngIf="notices.length > 0">
+        <app-content>
+            
+            <ng-container *ngIf="!paying && !disputing">
+                <h1>Violations</h1>
+                <br>
+                <p *ngIf="notices.length == 1">You have the option to pay or dispute the Civil Penalty below.</p>
+                <p *ngIf="notices.length > 1"><b>The above vehicle has more than one outstanding notice.</b></p>
+                <p *ngIf="notices.length > 1">They are arranged from oldest to newest. You have the option to pay or dispute individual Violations by deselecting from the list below. </p>
+                <br>
+                <app-notice 
+                        *ngFor="let notice of notices"
+                        [notice]="notice"
+                ></app-notice>
+                <button (click)="onClickLogOut()">Log Out</button>
+                <button (click)="onClickPay()">Pay</button>
+                <button (click)="onClickDispute()">Or dispute one or more Civil Penalties</button>
+            </ng-container>
+            
+            <ng-container *ngIf="paying">
+                <div class="content-header">
+                    <button class="back-button" (click)="onClickBack()">Back</button>
+                    <h1>Payment Details</h1>
+                    <button class="logout-button" (click)="onClickLogOut()">Log Out</button>
+                </div>
+                <app-payment-details></app-payment-details>
+            </ng-container>
+
+            <ng-container *ngIf="disputing">
+                <div class="content-header">
+                    <button class="back-button" (click)="onClickBack()">Back</button>
+                    <h1>Dispute Violation(s)</h1>
+                    <button class="logout-button" (click)="onClickLogOut()">Log Out</button>
+                </div>
+            </ng-container>
+            
+        </app-content>
+    </ng-container>
+    
     <app-footer></app-footer>
 </app-body>

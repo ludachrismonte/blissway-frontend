@@ -1,3 +1,5 @@
+@use '../../../styles' as *;
+
 .search-display {
   display: flex;
   flex-wrap: wrap;
@@ -10,4 +12,19 @@
       flex: 1 1 100%;
     }
   }
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-button {
+  background-color: $color-light-blue;
+  color: $color-medium-blue;
+}
+
+.logout-button {
+  background-color: $color-dark-blue;
+  color: white;
 }

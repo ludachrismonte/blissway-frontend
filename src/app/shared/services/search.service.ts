@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import {BehaviorSubject, Observable, of} from 'rxjs';
+import { Notice } from "../models/notice.interface";
+import { notices } from "../globals/notices.global";
 
 @Injectable({
   providedIn: 'root'
@@ -9,22 +11,22 @@ export class ViolationService {
   
   private apiUrl = 'https://example.com/api/search';
 
-  private dummyResponse = {
-    violationNumber: '12345',
-    state: 'NY',
-    licensePlate: 'ABC123'
-  };
+  public notices: BehaviorSubject<Notice[]> = new BehaviorSubject<Notice[]>([]);
   
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.notices.next(notices);
+  }
 
-  search(violationNumber: string, state: string, licensePlate: string): Observable<any> {
+  search(violationNumber: string, state: string, licensePlate: string) {
     const params = {
       violationNumber,
       state,
       licensePlate
     };
-
-    return of(this.dummyResponse);
-    //return this.http.get<any>(this.apiUrl, { params });
+    this.notices.next(notices);
+  }
+  
+  logOut() {
+    this.notices.next([]);
   }
 }

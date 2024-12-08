@@ -16,11 +16,13 @@ $font-black: 900;
 
 // Colors
 $color-dark-gray: #252424;
+$color-light-blue: #F4F5FA;
+$color-medium-blue: #48506F;
 $color-dark-blue: #222B49;
 
 html {
   min-height: 100vh;
-  background-color: #F4F5FA;
+  background-color: $color-light-blue;
   background-image: url('./assets/Background.svg');
   background-size: cover;
   background-position: bottom;
@@ -39,6 +41,23 @@ body {
 button {
   cursor: pointer;
   font-family: "Work Sans", sans-serif;
+  font-weight: $font-semi-bold;
+  border-radius: 30px;
+  border: none;
+  padding: 8px 17px;
+}
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+:root {
+  @include mat.checkbox-overrides((
+          selected-icon-color: $color-medium-blue,
+          selected-focus-icon-color: $color-medium-blue,
+          selected-hover-icon-color: $color-medium-blue,
+          selected-checkmark-color: white,
+          unselected-icon-color: $color-medium-blue,
+          unselected-focus-icon-color: $color-medium-blue,
+          unselected-hover-icon-color: $color-medium-blue,
+  ));
 }
 
 h1 {

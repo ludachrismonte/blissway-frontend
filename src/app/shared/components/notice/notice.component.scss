@@ -1,0 +1,61 @@
+@use '../../../../styles' as *;
+
+mat-expansion-panel {
+  box-shadow: none !important;
+}
+
+mat-expansion-panel-header {
+  background-color: $color-light-blue;
+  padding: 0 !important;
+}
+
+mat-expansion-panel-header:hover {
+  background-color: $color-light-blue !important;
+}
+
+mat-expansion-panel-header:focus {
+  background-color: $color-light-blue !important;
+}
+
+mat-expansion-panel-header:active {
+  background-color: $color-light-blue !important;
+}
+
+/* Change the unchecked checkbox background color */
+mat-checkbox mat-checkbox-background {
+  background-color: red;  /* Light gray background */
+  border: 2px solid blue; /* Border color */
+}
+
+/* Change the checked checkbox background color */
+mat-checkbox.mat-checkbox-checked mat-checkbox-background {
+  background-color: #4caf50;  /* Green background when checked */
+  border-color: #4caf50;      /* Green border when checked */
+}
+
+/* Change the checkmark color (tick) */
+mat-checkbox.mat-checkbox-checked mat-checkbox-checkmark-path {
+  stroke: white; /* White color for the checkmark */
+}
+
+/* Optionally, change the hover state (when mouse hovers over the checkbox) */
+mat-checkbox:hover mat-checkbox-background {
+  background-color: #e0e0e0;  /* Slightly darker gray on hover */
+}
+
+.handle {
+  width: 5%;
+  font-size: 30px;
+  color: $color-dark-blue;
+  font-weight: $font-light;
+}
+
+.question {
+  width: 95%;
+  font-weight: $font-bold;
+  font-size: 20px;
+}
+
+.answer {
+  padding-left: 16px;
+}

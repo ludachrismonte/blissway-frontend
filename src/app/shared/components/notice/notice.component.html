@@ -1,0 +1,15 @@
+<mat-expansion-panel
+        [(expanded)]="isExpanded"
+        hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            <mat-checkbox (click)="$event.stopPropagation()"></mat-checkbox>
+            <div class="handle">{{ isExpanded ? '>' : 'v' }}</div>
+            <div class="question">{{ notice.noticeDate }}</div>
+            <div class="question">{{ notice.noticeDate }}</div>
+            <div class="question">Unpaid</div>
+            <div class="question">{{ notice.dueDate }}</div>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p class="answer">{{ notice.id }}</p>
+</mat-expansion-panel>
